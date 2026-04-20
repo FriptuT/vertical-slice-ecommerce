@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gyX5Jw2xC5g=",
+  "dgSpecHash": "Qb45/FRCILo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\teodo\\Desktop\\simplifiedEcom\\src\\Ecommerce.Api\\Ecommerce.Api.csproj",
+  "projectFilePath": "C:\\Users\\teodo\\Desktop\\github-projects\\vertical-slice-ecommerce\\simplifiedEcom\\src\\Ecommerce.Api\\Ecommerce.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\teodo\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.15\\microsoft.aspnetcore.openapi.9.0.15.nupkg.sha512",
     "C:\\Users\\teodo\\.nuget\\packages\\microsoft.bcl.cryptography\\9.0.13\\microsoft.bcl.cryptography.9.0.13.nupkg.sha512",
