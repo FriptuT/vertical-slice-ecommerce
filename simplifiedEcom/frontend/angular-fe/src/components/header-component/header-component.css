@@ -1,0 +1,51 @@
+.navbar-header{
+    border-bottom: 1px solid gray;
+    width: 100vw;
+    height: 100px;
+}
+
+.paragraph-wishlist{
+    position:absolute;
+    left: 250px;
+    font-size:30px;
+    color:gray;
+}
+
+.products{
+    position: absolute;
+    left: 700px;
+    top: 40px;
+    text-decoration: none;
+    color: gray;
+    font-size: 20px;
+}
+
+.cart-div{
+    position:absolute;
+    top:35px;
+    right:600px;
+}
+.cart{
+    font-size: 20px;
+    text-decoration: none;
+    color: gray;
+}
+
+.authentication-div{
+    position:absolute;
+    right: 200px;
+    top:35px;
+}
+
+.login-a{
+    text-decoration: none;
+    font-size: 20px;
+    color:gray;
+}
+
+.signup-a{
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 15px;
+    color:gray;
+}

@@ -609,6 +609,7 @@
           }
         }
       },
+      "Swashbuckle.AspNetCore/9.0.0": {},
       "System.Configuration.ConfigurationManager/9.0.13": {
         "dependencies": {
           "System.Diagnostics.EventLog": "9.0.13",
@@ -731,7 +732,8 @@
       "Ecommerce.Api/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": "9.0.15",
-          "Microsoft.Data.SqlClient": "7.0.0"
+          "Microsoft.Data.SqlClient": "7.0.0",
+          "Swashbuckle.AspNetCore": "9.0.0"
         },
         "runtime": {
           "Ecommerce.Api.dll": {
@@ -964,6 +966,13 @@
       "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "path": "newtonsoft.json/13.0.1",
       "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-y6Q+U2Y6lrY0W8jQ97zSdFWuQioxXx4zbTLVFQBh9jcxkvizo2Y4pRNK0xx3VsYy78qQjSJNsarxAxr4VQqUHw==",
+      "path": "swashbuckle.aspnetcore/9.0.0",
+      "hashPath": "swashbuckle.aspnetcore.9.0.0.nupkg.sha512"
     },
     "System.Configuration.ConfigurationManager/9.0.13": {
       "type": "package",
