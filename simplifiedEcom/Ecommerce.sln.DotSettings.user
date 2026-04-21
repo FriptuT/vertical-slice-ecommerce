@@ -1,0 +1,7 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=36d81161_002De5da_002D45a0_002Db4bc_002D69f6744ebec0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Handle_Should_Return_200Ok_With_Products" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Products.GetAll.GetAllProductsTests.Handle_Should_Return_200Ok_With_Products&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Products.GetById.GetByIdProductTests.Handle_Should_Return_200Ok_With_One_Product&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
