@@ -17,7 +17,6 @@ C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\t
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\tests\Ecommerce.Tests\bin\Debug\net9.0\Ecommerce.Tests.pdb
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\tests\Ecommerce.Tests\bin\Debug\net9.0\Castle.Core.dll
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\tests\Ecommerce.Tests\bin\Debug\net9.0\FluentAssertions.dll
-C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\tests\Ecommerce.Tests\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\tests\Ecommerce.Tests\bin\Debug\net9.0\Microsoft.Bcl.Cryptography.dll
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\tests\Ecommerce.Tests\bin\Debug\net9.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\tests\Ecommerce.Tests\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
@@ -154,3 +153,6 @@ C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\t
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\tests\Ecommerce.Tests\obj\Debug\net9.0\Ecommerce.Tests.pdb
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\tests\Ecommerce.Tests\obj\Debug\net9.0\Ecommerce.Tests.genruntimeconfig.cache
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\tests\Ecommerce.Tests\obj\Debug\net9.0\ref\Ecommerce.Tests.dll
+C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\tests\Ecommerce.Tests\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\tests\Ecommerce.Tests\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\tests\Ecommerce.Tests\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll

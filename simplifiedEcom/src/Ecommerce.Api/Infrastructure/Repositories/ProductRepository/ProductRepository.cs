@@ -13,20 +13,33 @@ public class ProductRepository : IProductRepository
         _databaseConnection = databaseConnection;
     }
 
-    public async Task<List<GetAllProductDto>> GetAllAsync()
+    public async Task<List<GetAllProductDto>> GetAllAsync(int? categoryId, int? subcategoryId, int? brandId)
     {
         var products = new List<GetAllProductDto>();
 
         using var connection = _databaseConnection.CreateConnection();
 
         var selectAllProductsCommand = new SqlCommand(
-                @"
-                SELECT 
-                    Id, 
-                    ImageUrl, 
-                    Price, 
-                    Name FROM Products", connection);
+            @"
+        SELECT 
+            p.Id, 
+            p.ImageUrl, 
+            p.Price, 
+            p.Name 
+        FROM Products p
+        WHERE 
+            (@categoryId IS NULL 
+                OR p.CategoryId = @categoryId)
+        AND (@subcategoryId IS NULL 
+                OR p.SubcategoryId = @subcategoryId)
+        AND (@brandId IS NULL 
+                OR p.BrandId = @brandId)
+        ", connection);
 
+        selectAllProductsCommand.Parameters.AddWithValue("@categoryId", categoryId);
+        selectAllProductsCommand.Parameters.AddWithValue("@subcategoryId", subcategoryId);
+        selectAllProductsCommand.Parameters.AddWithValue("@brandId", brandId);
+        
         await connection.OpenAsync();
 
         using SqlDataReader readProducts = await selectAllProductsCommand.ExecuteReaderAsync();
@@ -68,7 +81,7 @@ public class ProductRepository : IProductRepository
             JOIN Brands AS b ON p.BrandId = b.Id
             WHERE p.Id = @id
             "
-            ,connection);
+            , connection);
         selectProductByIdcommand.Parameters.AddWithValue("@id", id);
 
         await connection.OpenAsync();

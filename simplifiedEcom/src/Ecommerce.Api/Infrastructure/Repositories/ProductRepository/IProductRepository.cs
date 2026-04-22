@@ -4,6 +4,6 @@ using Domain.Product;
 
 public interface IProductRepository
 {
-    Task<List<GetAllProductDto>> GetAllAsync();
+    Task<List<GetAllProductDto>> GetAllAsync(int? categoryId, int? subcategoryId, int? brandId);
     Task<Product> GetByIdAsync(int id);
 }

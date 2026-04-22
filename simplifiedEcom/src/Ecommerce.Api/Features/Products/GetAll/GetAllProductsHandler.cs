@@ -11,9 +11,9 @@ public class GetAllProductsHandler
         _repo = repo;
     }
 
-    public async Task<IResult> Handle()
+    public async Task<IResult> Handle(int? categoryId, int? subcategoryId, int? brandId)
     {
-        var products = await _repo.GetAllAsync();
+        var products = await _repo.GetAllAsync(categoryId, subcategoryId, brandId);
 
         return Results.Ok(products);
     }

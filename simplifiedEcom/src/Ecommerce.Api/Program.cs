@@ -1,5 +1,8 @@
 using DefaultNamespace;
 using Ecommerce.Api.Features.Products.GetAll;
+using Ecommerce.Api.Features.Products.GetAllBrandsWithCount;
+using Ecommerce.Api.Features.Products.GetAllCategories;
+using Ecommerce.Api.Features.Products.GetAllSubcategories;
 using Ecommerce.Api.Features.Products.GetById;
 using Ecommerce.Api.Infrastructure.Repositories.ProductRepository;
 
@@ -41,6 +44,11 @@ app.UseCors("AngularSimplifiedEcommerceCorsPolicy");
 
 app.MapGetAllProducts();
 app.MapGetByIdProduct();
+
+// filtering
+app.MapGetAllCategories();
+app.MapGetAllSubcategories();
+app.MapGetAllBrandsWithCount();
 
 app.UseHttpsRedirection();
 

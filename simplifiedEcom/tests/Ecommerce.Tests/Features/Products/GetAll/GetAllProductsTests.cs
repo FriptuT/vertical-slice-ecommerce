@@ -40,11 +40,11 @@ public class GetAllProductsTests
             }
         };
         _repositoryMock
-            .Setup(repo => repo.GetAllAsync())
+            .Setup(repo => repo.GetAllAsync(null,null,null))
             .ReturnsAsync(products);
 
         // Act
-        var result = await _handler.Handle();
+        var result = await _handler.Handle(null,null,null);
 
         // Assert
         result.Should().BeOfType<Ok<List<GetAllProductDto>>>();
