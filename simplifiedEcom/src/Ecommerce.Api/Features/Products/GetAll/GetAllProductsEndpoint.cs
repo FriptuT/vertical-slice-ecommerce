@@ -4,6 +4,6 @@ public static class GetAllProductsEndpoint
 {
     public static void MapGetAllProducts(this IEndpointRouteBuilder app)
     {
-        app.MapGet("/products", async (GetAllProductsHandler handler) => await handler.Handle());
+        app.MapGet("api/products", async (GetAllProductsHandler handler) => await handler.Handle());
     }
 }

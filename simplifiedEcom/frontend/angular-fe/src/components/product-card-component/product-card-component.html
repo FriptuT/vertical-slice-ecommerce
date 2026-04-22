@@ -1,1 +1,13 @@
-<p>product-card-component works!</p>
+<div class="product-card">
+    <img  [src]="productInput.imageUrl" [alt]="productInput.imageUrl" width="150">
+    <p>Price: {{ productInput.price }} </p>
+    <p>Name: {{ productInput.name }}</p>
+
+    <div class="buttons">
+        <button 
+        class="view-btn"
+        [routerLink]="['/products', productInput.id]"
+        >View</button>
+        <button class="cart-btn">Add to cart</button>
+    </div>
+</div>

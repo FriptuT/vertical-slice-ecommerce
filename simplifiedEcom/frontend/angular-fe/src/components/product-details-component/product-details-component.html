@@ -1,0 +1,14 @@
+@if (product$ | async; as product) {
+  <div class="imageUrl">
+    <img [src]="product.imageUrl" [alt]="product.imageUrl" width="300px" />
+  </div>
+
+  <div class="product-details">
+    <h2 class="h2-name">{{ product.name }}</h2>
+    <h4 class="h4-category">Category: {{ product.categoryName }} > <span>{{ product.subcategoryName }}</span></h4>
+    <h2 class="h4-price">Rs. {{ product.price }}</h2>
+    <h4 class="h4-availability">Availability: {{ product.availability }}</h4>
+    <h4 class="h4-condition">Condition: {{ product.condition }}</h4>
+    <h4 class="h4-brandName">Brand: {{ product.brandName }}</h4>
+  </div>
+}

@@ -1,0 +1,42 @@
+.product-details{
+    position:absolute;
+    right:200px;
+    top:150px;
+    border:3px solid rgb(221, 220, 220);
+    padding: 50px;
+    width:500px;
+}
+
+.imageUrl{
+    position:absolute;
+    left:750px;
+    top:150px;
+    border: 3px solid rgb(221, 220, 220);
+    width:300px;
+    height: 415px;
+}
+
+.h4-price{
+    color:orange;
+}
+
+.h2-name{
+    font-family: 'Courier New', Courier, monospace;
+    color:rgb(83, 83, 83);
+}
+
+.h4-category{
+    color: rgb(97, 97, 97);
+}
+
+.h4-availability{
+    color:rgb(97, 97, 97);
+}
+
+.h4-condition{
+    color:rgb(97, 97, 97);
+}
+
+.h4-brandName{
+    color:rgb(97, 97, 97);
+}

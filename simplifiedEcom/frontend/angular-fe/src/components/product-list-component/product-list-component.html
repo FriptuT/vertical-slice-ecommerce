@@ -1,3 +1,17 @@
+<h2 class="products-header">Products</h2>
+
+<div class="categories">
+  <h2 class="category-header">Category</h2>
+</div>
+
+<div class="brands">
+  <h2 class="brands-header">Brands</h2>
+</div>
+
 <div class="product-container">
-    <app-product-card-component></app-product-card-component>
+  @for (product of products$ | async; track product.id) {
+    <app-product-card-component 
+    [productInput]="product"
+    ></app-product-card-component>
+  }
 </div>

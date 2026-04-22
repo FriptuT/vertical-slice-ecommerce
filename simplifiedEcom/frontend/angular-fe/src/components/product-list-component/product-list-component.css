@@ -1,0 +1,24 @@
+.product-container{
+    position: absolute;
+    left:800px;
+    top:200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:50px;
+}
+
+.products-header{
+    position:absolute;
+    right: 700px;
+}
+
+.category-header{
+    position:absolute;
+    left:300px;
+}
+
+.brands-header{
+    position: absolute;
+    top:450px;
+    left:300px;
+}
