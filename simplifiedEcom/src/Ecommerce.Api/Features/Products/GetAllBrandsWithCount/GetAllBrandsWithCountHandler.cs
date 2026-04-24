@@ -14,6 +14,11 @@ public class GetAllBrandsWithCountHandler
     public async Task<IResult> Handle()
     {
         var brands = await _repo.GetAllBrandsAsync();
+
+        if (brands == null || !brands.Any())
+        {
+            return Results.NotFound();
+        }
         
         return Results.Ok(brands);
     }

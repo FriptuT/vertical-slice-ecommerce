@@ -4,6 +4,7 @@ using Ecommerce.Api.Features.Products.GetAllBrandsWithCount;
 using Ecommerce.Api.Features.Products.GetAllCategories;
 using Ecommerce.Api.Features.Products.GetAllSubcategories;
 using Ecommerce.Api.Features.Products.GetById;
+using Ecommerce.Api.Infrastructure.Repositories.FilterRepository;
 using Ecommerce.Api.Infrastructure.Repositories.ProductRepository;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -30,6 +31,12 @@ builder.Services.AddScoped<Db>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<GetAllProductsHandler>();
 builder.Services.AddScoped<GetByIdProductHandler>();
+
+// filtering
+builder.Services.AddScoped<IFilterRepository, FilterRepository>();
+builder.Services.AddScoped<GetAllCategoriesHandler>();
+builder.Services.AddScoped<GetAllSubcategoriesHandler>();
+builder.Services.AddScoped<GetAllBrandsWithCountHandler>();
 
 var app = builder.Build();
 

@@ -16,6 +16,11 @@ public class GetAllSubcategoriesHandler
     {
         var subcategories = await _repo.GetByCategoryIdAsync(categoryId);
 
+        if (subcategories == null || !subcategories.Any())
+        {
+            return Results.NotFound();
+        }
+        
         return Results.Ok(subcategories);
     }
 }

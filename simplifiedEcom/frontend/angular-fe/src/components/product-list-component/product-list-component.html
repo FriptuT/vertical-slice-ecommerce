@@ -1,17 +1,44 @@
-<h2 class="products-header">Products</h2>
+<h2 class="products-header">PRODUCTS</h2>
 
 <div class="categories">
-  <h2 class="category-header">Category</h2>
+  <h2 class="category-header">CATEGORY</h2>
+  <div class="li-categories">
+    @for (category of categories$ | async; track category.id) {
+      <li>
+        <div class="category-item color-gray" (click)="toggleCategory(category.id)">
+          {{ category.name }} <span class="plus-span">+</span>
+        </div>
+
+        <!-- subcategories -->
+        @if (expandedCategoryId === category.id) {
+          <ul class="color-gray">
+            @for (subcategory of subcategoriesMap[category.id]; track subcategory.id) {
+              <li (click)="filterBySubcategory(subcategory.id)">
+                {{ subcategory.name }}
+              </li>
+            }
+          </ul>
+        }
+      </li>
+    }
+  </div>
 </div>
 
+<h2 class="brands-header">BRANDS</h2>
 <div class="brands">
-  <h2 class="brands-header">Brands</h2>
+  <div class="li-brands">
+    @for (brand of brands$ | async; track brand.id) {
+      <li class="color-gray" (click)="filterByBrand(brand.id)">
+        {{ brand.name }}
+
+        <span class="brand-count"> ({{ brand.productCount }}) </span>
+      </li>
+    }
+  </div>
 </div>
 
 <div class="product-container">
   @for (product of products$ | async; track product.id) {
-    <app-product-card-component 
-    [productInput]="product"
-    ></app-product-card-component>
+    <app-product-card-component [productInput]="product"></app-product-card-component>
   }
 </div>

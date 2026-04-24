@@ -5,6 +5,6 @@ public static class GetAllSubcategoriesEndpoint
     public static void MapGetAllSubcategories(this IEndpointRouteBuilder app)
     {
         app.MapGet("/api/subcategories",
-            async (int categoryId, GetAllSubcategoriesHandler handler) => handler.Handle(categoryId));
+            async (int categoryId, GetAllSubcategoriesHandler handler) => await handler.Handle(categoryId));
     }
 }

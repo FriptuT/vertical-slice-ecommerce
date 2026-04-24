@@ -10,15 +10,63 @@
 .products-header{
     position:absolute;
     right: 700px;
+    color:orange;
 }
 
 .category-header{
+    color:orange;
+}
+
+.brands-header{
+    color:orange;
+    position:absolute;
+    top: 430px;
+    left:300px;
+}
+
+.categories{
     position:absolute;
     left:300px;
 }
 
-.brands-header{
+.brands{
     position: absolute;
-    top:450px;
+    top:500px;
     left:300px;
+    border:1px solid rgb(226, 226, 226);
+    width:250px;
+    padding:10px;
+}
+
+.color-gray
+{
+    color:gray;
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    list-style:none;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.li-categories{
+    border:1px solid rgb(226, 226, 226);
+    width: 200px;
+    padding:5px;
+}
+
+.plus-span{
+    position:absolute;
+    right:10px;
+    font-weight: bold;
+}
+
+.brand-count{
+    position:absolute;
+    right:5px;
 }

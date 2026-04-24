@@ -1,6 +1,7 @@
 ﻿namespace Ecommerce.Api.Features.Products.GetAllCategories;
 
 using Infrastructure.Repositories.FilterRepository;
+using Microsoft.AspNetCore.Mvc;
 
 public class GetAllCategoriesHandler
 {
@@ -15,6 +16,14 @@ public class GetAllCategoriesHandler
     {
         var categories = await _repo.GetAllCategoriesAsync();
 
-        return Results.Ok(categories);
+        if (categories == null || !categories.Any())
+        {
+            return Results.NotFound();
+        }
+        else
+        {
+            return Results.Ok(categories);
+        }
+        
     }
 }

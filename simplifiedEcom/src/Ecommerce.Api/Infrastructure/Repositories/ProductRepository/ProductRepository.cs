@@ -1,5 +1,6 @@
 ﻿namespace Ecommerce.Api.Infrastructure.Repositories.ProductRepository;
 
+using System.Data;
 using DefaultNamespace;
 using Domain.Product;
 using Microsoft.Data.SqlClient;
@@ -36,9 +37,14 @@ public class ProductRepository : IProductRepository
                 OR p.BrandId = @brandId)
         ", connection);
 
-        selectAllProductsCommand.Parameters.AddWithValue("@categoryId", categoryId);
-        selectAllProductsCommand.Parameters.AddWithValue("@subcategoryId", subcategoryId);
-        selectAllProductsCommand.Parameters.AddWithValue("@brandId", brandId);
+        selectAllProductsCommand.Parameters.Add("@categoryId", SqlDbType.Int)
+            .Value = categoryId ?? (object)DBNull.Value;
+
+        selectAllProductsCommand.Parameters.Add("@subcategoryId", SqlDbType.Int)
+            .Value = subcategoryId ?? (object)DBNull.Value;
+
+        selectAllProductsCommand.Parameters.Add("@brandId", SqlDbType.Int)
+            .Value = brandId ?? (object)DBNull.Value;
         
         await connection.OpenAsync();
 
