@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "h/KEgI1C9v8=",
+  "dgSpecHash": "PMAD2gdoheI=",
   "success": true,
   "projectFilePath": "C:\\Users\\teodo\\Desktop\\github-projects\\vertical-slice-ecommerce\\simplifiedEcom\\src\\Ecommerce.Api\\Ecommerce.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\teodo\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.12\\microsoft.aspnetcore.authentication.jwtbearer.9.0.12.nupkg.sha512",
     "C:\\Users\\teodo\\.nuget\\packages\\microsoft.bcl.cryptography\\9.0.13\\microsoft.bcl.cryptography.9.0.13.nupkg.sha512",
     "C:\\Users\\teodo\\.nuget\\packages\\microsoft.data.sqlclient\\7.0.0\\microsoft.data.sqlclient.7.0.0.nupkg.sha512",
     "C:\\Users\\teodo\\.nuget\\packages\\microsoft.data.sqlclient.extensions.abstractions\\1.0.0\\microsoft.data.sqlclient.extensions.abstractions.1.0.0.nupkg.sha512",

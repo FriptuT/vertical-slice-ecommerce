@@ -1,4 +1,6 @@
+using System.Text;
 using DefaultNamespace;
+using Ecommerce.Api.Features.Authentication;
 using Ecommerce.Api.Features.Products.GetAll;
 using Ecommerce.Api.Features.Products.GetAllBrandsWithCount;
 using Ecommerce.Api.Features.Products.GetAllCategories;
@@ -6,6 +8,9 @@ using Ecommerce.Api.Features.Products.GetAllSubcategories;
 using Ecommerce.Api.Features.Products.GetById;
 using Ecommerce.Api.Infrastructure.Repositories.FilterRepository;
 using Ecommerce.Api.Infrastructure.Repositories.ProductRepository;
+using Ecommerce.Api.Infrastructure.Repositories.UserRepository;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,6 +43,31 @@ builder.Services.AddScoped<GetAllCategoriesHandler>();
 builder.Services.AddScoped<GetAllSubcategoriesHandler>();
 builder.Services.AddScoped<GetAllBrandsWithCountHandler>();
 
+// auth
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<JwtService>();
+builder.Services.AddScoped<AuthenticationHandler>();
+
+// JWT AUTH
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+        };
+    });
+
+builder.Services.AddAuthorization();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -49,6 +79,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors("AngularSimplifiedEcommerceCorsPolicy");
 
+app.UseAuthentication();
+app.UseAuthorization();
+
 app.MapGetAllProducts();
 app.MapGetByIdProduct();
 
@@ -56,6 +89,8 @@ app.MapGetByIdProduct();
 app.MapGetAllCategories();
 app.MapGetAllSubcategories();
 app.MapGetAllBrandsWithCount();
+
+app.MapAuthEndpoints();
 
 app.UseHttpsRedirection();
 

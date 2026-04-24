@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "/rEU0cZCJ/s=",
+  "dgSpecHash": "g3uVALB5dro=",
   "success": true,
   "projectFilePath": "C:\\Users\\teodo\\Desktop\\github-projects\\vertical-slice-ecommerce\\simplifiedEcom\\tests\\Ecommerce.Tests\\Ecommerce.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\teodo\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\teodo\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
     "C:\\Users\\teodo\\.nuget\\packages\\fluentassertions\\8.9.0\\fluentassertions.8.9.0.nupkg.sha512",
+    "C:\\Users\\teodo\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.12\\microsoft.aspnetcore.authentication.jwtbearer.9.0.12.nupkg.sha512",
     "C:\\Users\\teodo\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.3.9\\microsoft.aspnetcore.http.abstractions.2.3.9.nupkg.sha512",
     "C:\\Users\\teodo\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.3.0\\microsoft.aspnetcore.http.features.2.3.0.nupkg.sha512",
     "C:\\Users\\teodo\\.nuget\\packages\\microsoft.bcl.cryptography\\9.0.13\\microsoft.bcl.cryptography.9.0.13.nupkg.sha512",

@@ -70,3 +70,166 @@ li{
     position:absolute;
     right:5px;
 }
+
+/* ----------------------------------------------------------responsive---------------------------------------------------------- */
+
+/* ================================= */
+/* LAPTOP (max-width: 1200px) */
+/* ================================= */
+
+@media (max-width: 1200px) {
+
+    .product-container {
+
+        left: 500px;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 30px;
+
+    }
+
+    .products-header {
+
+        right: 400px;
+
+    }
+
+    .categories {
+
+        left: 100px;
+
+    }
+
+    .brands {
+
+        left: 100px;
+
+        width: 220px;
+
+    }
+
+    .brands-header {
+
+        left: 100px;
+
+    }
+
+}
+
+
+/* ================================= */
+/* TABLET (max-width: 768px) */
+/* ================================= */
+
+@media (max-width: 768px) {
+
+    .categories {
+
+        position: relative;
+
+        left: 0;
+
+        margin: 20px auto;
+
+        width: 90%;
+
+    }
+
+    .brands {
+
+        position: relative;
+
+        top: 0;
+        left: 0;
+
+        margin: 20px auto;
+
+        width: 90%;
+
+    }
+
+    .brands-header {
+
+        position: relative;
+
+        top: 0;
+        left: 0;
+
+        margin-left: 20px;
+
+    }
+
+    .product-container {
+
+        position: relative;
+
+        left: 0;
+        top: 0;
+
+        margin: 20px auto;
+
+        width: 90%;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+
+    }
+
+    .products-header {
+
+        position: relative;
+
+        right: 0;
+
+        text-align: center;
+
+        margin-top: 20px;
+
+    }
+
+}
+
+
+/* ================================= */
+/* MOBILE (max-width: 480px) */
+/* ================================= */
+
+@media (max-width: 480px) {
+
+    .product-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        width: 95%;
+
+    }
+
+    .categories {
+
+        width: 95%;
+
+    }
+
+    .brands {
+
+        width: 95%;
+
+    }
+
+    li {
+
+        font-size: 18px;
+
+    }
+
+    .li-categories {
+
+        width: 100%;
+
+    }
+
+}

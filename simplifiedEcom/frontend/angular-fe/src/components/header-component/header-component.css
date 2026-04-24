@@ -49,3 +49,135 @@
     margin-left: 15px;
     color:gray;
 }
+
+
+/* ---------------------------------------------------------responsive------------------------------------------------- */
+
+/* ============================= */
+/* LAPTOP (max-width: 1200px) */
+/* ============================= */
+
+@media (max-width: 1200px) {
+
+    .paragraph-wishlist {
+        left: 150px;
+        font-size: 26px;
+    }
+
+    .products {
+        left: 500px;
+        font-size: 18px;
+    }
+
+    .cart-div {
+        right: 400px;
+    }
+
+    .authentication-div {
+        right: 100px;
+    }
+
+}
+
+
+/* ============================= */
+/* TABLET (max-width: 768px) */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    .navbar-header {
+        height: 120px;
+    }
+
+    .paragraph-wishlist {
+
+        position: relative;
+        left: 0;
+        text-align: center;
+        font-size: 24px;
+        margin-top: 10px;
+
+    }
+
+    .products {
+
+        position: relative;
+        left: 0;
+        top: 0;
+
+        display: block;
+        text-align: center;
+
+        margin-top: 10px;
+
+    }
+
+    .cart-div {
+
+        position: relative;
+        right: 0;
+        top: 0;
+
+        text-align: center;
+        margin-top: 10px;
+
+    }
+
+    .authentication-div {
+
+        position: relative;
+        right: 0;
+        top: 0;
+
+        text-align: center;
+        margin-top: 10px;
+
+    }
+
+}
+
+
+/* ============================= */
+/* MOBILE (max-width: 480px) */
+/* ============================= */
+
+@media (max-width: 480px) {
+
+    .navbar-header {
+
+        height: auto;
+        padding: 10px;
+
+    }
+
+    .paragraph-wishlist {
+
+        font-size: 20px;
+
+    }
+
+    .products {
+
+        font-size: 16px;
+
+    }
+
+    .cart {
+
+        font-size: 16px;
+
+    }
+
+    .login-a,
+    .signup-a {
+
+        font-size: 16px;
+
+        display: block;
+        margin-left: 0;
+        margin-top: 5px;
+
+    }
+
+}
