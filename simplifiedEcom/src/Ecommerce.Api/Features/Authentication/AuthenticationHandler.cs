@@ -43,9 +43,9 @@ public class AuthenticationHandler
 
         if (user == null)
         {
-            return Results.BadRequest("Invalid credentials");
+            return Results.Unauthorized();
         }
-
+        
         var hasher = new PasswordHasher<object>();
 
         var result = hasher.VerifyHashedPassword(
@@ -55,7 +55,7 @@ public class AuthenticationHandler
 
         if (result != PasswordVerificationResult.Success)
         {
-            return Results.BadRequest("Invalid credentials");
+            return Results.Unauthorized();
         }
 
         var token = _jwt.GenerateToken(user);

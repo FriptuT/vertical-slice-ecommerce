@@ -8,9 +8,9 @@ public class UserRepository: IUserRepository
 {
     private readonly Db _databaseConnection;
 
-    public UserRepository(Db _databaseConnection)
+    public UserRepository(Db databaseConnection)
     {
-        _databaseConnection = _databaseConnection;
+        _databaseConnection = databaseConnection;
     }
 
     public async Task<bool> EmailExistsAsync(string email)

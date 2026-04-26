@@ -3,6 +3,7 @@
 using Api.Domain.Product;
 using Api.Features.Products.GetAll;
 using Api.Infrastructure.Repositories.ProductRepository;
+using Api.Infrastructure.Repositories.UserRepository;
 using FluentAssertions;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Moq;

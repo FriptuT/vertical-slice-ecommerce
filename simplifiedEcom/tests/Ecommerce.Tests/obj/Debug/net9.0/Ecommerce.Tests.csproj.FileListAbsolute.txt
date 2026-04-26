@@ -156,3 +156,4 @@ C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\t
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\tests\Ecommerce.Tests\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\tests\Ecommerce.Tests\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\tests\Ecommerce.Tests\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\tests\Ecommerce.Tests\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

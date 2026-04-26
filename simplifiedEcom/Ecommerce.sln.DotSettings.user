@@ -8,5 +8,10 @@
     &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Products.GetAllSubcategories.GetAllSubcategoriesTests.Handler_Should_Return_200_Ok_With_Subcategories&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Products.GetAllSubcategories.GetAllSubcategoriesTests.Handler_Should_Return_NotFound_When_Subcategories_Are_Empty&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Products.GetAllBrands.GetAllBrandsTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Authentication.Register.RegisterUserTests.Register_Method_Should_Return_400_Bad_Request_When_Email_Already_Exists&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Authentication.Register.RegisterUserTests.Register_Method_Should_Return_200OK_When_Email_Doesnt_Exists_and_User_is_Created&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Authentication.Login.LoginUserTests.Login_Method_Should_Return_400_BadRequest_When_User_is_Null&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Authentication.Login.LoginUserTests.Login_Method_Should_Return_401_Unauthorised_When_User_is_Null&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Authentication.Login.LoginUserTests.Login_Method_Should_Return_200_And_Token_When_Password_Is_Valid&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
