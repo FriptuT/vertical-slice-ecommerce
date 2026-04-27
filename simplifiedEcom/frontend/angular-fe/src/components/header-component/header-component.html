@@ -7,8 +7,17 @@
         <a routerLink="/wishlist" class="cart"><span class="cart-icon">🛒 Cart</span></a>
     </div>
 
-    <div class="authentication-div">
+    <div class="authentication-div" *ngIf="!username">
         <a routerLink="/login" class="login-a">Login</a>
         <a routerLink="/register" class="signup-a">Sign Up</a>
     </div>
+
+    <div class="loggedIn-div">
+        <span *ngIf="username" class="onhover-orange">
+        Logged in as <b>{{username}}</b>
+        </span>
+
+    <a *ngIf="username" (click)="logout()" class="logout-btn">Logout</a>
+    </div>
+    
 </nav>

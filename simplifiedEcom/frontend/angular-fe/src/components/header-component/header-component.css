@@ -50,6 +50,27 @@
     color:gray;
 }
 
+.loggedIn-div{
+    position:absolute;
+    right:100px;
+    top:40px;
+    font-size: 20px;
+    color:gray;
+}
+
+.logout-btn{
+    margin-left: 30px;
+}
+
+.logout-btn:hover{
+    color:red;
+}
+
+
+.onhover-orange:hover{
+    color:orange;
+}
+
 
 /* ---------------------------------------------------------responsive------------------------------------------------- */
 

@@ -1,0 +1,36 @@
+<div class="login-container">
+  <h2>New User Signup</h2>
+
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+    <div>
+      <input type="text" formControlName="name" placeholder="Name" class="register-inputs" />
+
+      <small *ngIf="registerForm.get('name')?.invalid && registerForm.get('name')?.touched" class="red-alerts">
+        Name required
+      </small>
+    </div>
+
+    <div>
+      <input type="email" formControlName="email" placeholder="Email Address" class="register-inputs" />
+
+      <small *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" class="red-alerts">
+        Email invalid
+      </small>
+    </div>
+
+    <div>
+      <input type="password" formControlName="password" placeholder="Password" class="register-inputs" />
+
+      <small *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" class="red-alerts">
+        Password required
+      </small>
+    </div>
+
+    
+
+    <button type="submit" class="auth-btn">Register</button>
+  </form>
+
+  <p>{{ message }}</p>
+</div>
