@@ -2,6 +2,7 @@
 
 public class CartItemDto
 {
+    public int ProductId { get; set; }
     public string Imageurl { get; set; }
     public string Description { get; set; }
     public decimal Price { get; set; }

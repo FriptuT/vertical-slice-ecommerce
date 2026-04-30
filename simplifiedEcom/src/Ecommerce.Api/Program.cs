@@ -3,6 +3,7 @@ using DefaultNamespace;
 using Ecommerce.Api.Features.Authentication;
 using Ecommerce.Api.Features.Cart.AddToCart;
 using Ecommerce.Api.Features.Cart.GetCart;
+using Ecommerce.Api.Features.Cart.RemoveCartItem;
 using Ecommerce.Api.Features.Cart.UpdateCartItem;
 using Ecommerce.Api.Features.Products.GetAll;
 using Ecommerce.Api.Features.Products.GetAllBrandsWithCount;
@@ -57,6 +58,7 @@ builder.Services.AddScoped<ICartRepository, CartRepository>();
 builder.Services.AddScoped<AddToCartHandler>();
 builder.Services.AddScoped<GetCartHandler>();
 builder.Services.AddScoped<UpdateCartItemHandler>();
+builder.Services.AddScoped<RemoveCartItemHandler>();
 
 // JWT AUTH
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -108,6 +110,7 @@ app.MapAuthEndpoints();
 app.MapPostAddToCartEndpoint();
 app.MapGetCartEndpoint();
 app.MapPutUpdateCartItemEndpoint();
+app.MapDeleteRemoveCartItemEndpoint();
 
 app.UseHttpsRedirection();
 

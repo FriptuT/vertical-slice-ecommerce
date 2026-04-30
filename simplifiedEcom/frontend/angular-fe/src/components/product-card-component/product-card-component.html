@@ -8,6 +8,6 @@
         class="view-btn"
         [routerLink]="['/products', productInput.id]"
         >View</button>
-        <button class="cart-btn">Add to cart</button>
+        <button class="cart-btn" (click)="addToCart(productInput.id)">Add to cart</button>
     </div>
 </div>

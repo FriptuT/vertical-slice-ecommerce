@@ -1,0 +1,18 @@
+<div *ngFor="let item of cartItems" class="cart-item">
+    <img [src]="item.imageUrl" alt="zzz" width="80" />
+
+    <div class="info">
+        <h3>{{item.description}}</h3>
+        <p>Price {{item.price}}</p>
+
+        <div class="qty">
+            <button (click)="decrease(item)">-</button>
+            <span>{{item.quantity}}</span>
+            <button (click)="increase(item)">+</button>
+        </div>
+
+        <p>Total: {{item.total}}</p>
+
+        <button (click)="remove(item)">Remove</button>
+    </div>
+</div>

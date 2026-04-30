@@ -1,19 +1,19 @@
 ﻿namespace Ecommerce.Api.Features.Cart.UpdateCartItem;
 
 using Domain.Cart;
+using Microsoft.AspNetCore.Mvc;
 
 public static class UpdateCartItemEndpoint
 {
     public static void MapPutUpdateCartItemEndpoint(this IEndpointRouteBuilder app)
     {
-        app.MapPut("/api/cart/{productId:int}",
+        app.MapPut("/api/cart/update",
             async (
-                int productId,
-                UpdateCartItemRequest request,
-                UpdateCartItemHandler handler
+                [FromBody] UpdateCartItemRequest request,
+                [FromServices] UpdateCartItemHandler handler
             ) =>
             {
-                handler.Handle(request.UserId, productId, request.Quantity);
+              await handler.Handle(request.UserId, request.ProductId, request.Quantity);
             });
     }
 }
