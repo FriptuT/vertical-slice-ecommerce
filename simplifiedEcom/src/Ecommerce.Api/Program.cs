@@ -1,11 +1,15 @@
 using System.Text;
 using DefaultNamespace;
 using Ecommerce.Api.Features.Authentication;
+using Ecommerce.Api.Features.Cart.AddToCart;
+using Ecommerce.Api.Features.Cart.GetCart;
+using Ecommerce.Api.Features.Cart.UpdateCartItem;
 using Ecommerce.Api.Features.Products.GetAll;
 using Ecommerce.Api.Features.Products.GetAllBrandsWithCount;
 using Ecommerce.Api.Features.Products.GetAllCategories;
 using Ecommerce.Api.Features.Products.GetAllSubcategories;
 using Ecommerce.Api.Features.Products.GetById;
+using Ecommerce.Api.Infrastructure.Repositories.CartRepository;
 using Ecommerce.Api.Infrastructure.Repositories.FilterRepository;
 using Ecommerce.Api.Infrastructure.Repositories.ProductRepository;
 using Ecommerce.Api.Infrastructure.Repositories.UserRepository;
@@ -48,6 +52,12 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<JwtService>();
 builder.Services.AddScoped<AuthenticationHandler>();
 
+// cart
+builder.Services.AddScoped<ICartRepository, CartRepository>();
+builder.Services.AddScoped<AddToCartHandler>();
+builder.Services.AddScoped<GetCartHandler>();
+builder.Services.AddScoped<UpdateCartItemHandler>();
+
 // JWT AUTH
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -82,6 +92,7 @@ app.UseCors("AngularSimplifiedEcommerceCorsPolicy");
 app.UseAuthentication();
 app.UseAuthorization();
 
+// products
 app.MapGetAllProducts();
 app.MapGetByIdProduct();
 
@@ -90,7 +101,13 @@ app.MapGetAllCategories();
 app.MapGetAllSubcategories();
 app.MapGetAllBrandsWithCount();
 
+// auth
 app.MapAuthEndpoints();
+
+// cart
+app.MapPostAddToCartEndpoint();
+app.MapGetCartEndpoint();
+app.MapPutUpdateCartItemEndpoint();
 
 app.UseHttpsRedirection();
 

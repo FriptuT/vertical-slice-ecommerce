@@ -13,5 +13,11 @@
     &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Authentication.Login.LoginUserTests.Login_Method_Should_Return_400_BadRequest_When_User_is_Null&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Authentication.Login.LoginUserTests.Login_Method_Should_Return_401_Unauthorised_When_User_is_Null&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Authentication.Login.LoginUserTests.Login_Method_Should_Return_200_And_Token_When_Password_Is_Valid&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Cart.AddToCart.AddToCartHandlerTests.Handler_Should_Return_200OK_With_CartItem&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Cart.GetCart.GetCartHandlerTests.Handler_Should_Return_200OK_With_CartItems&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Cart.GetCart.GetCartHandlerTests.Handler_Should_Return_NotFound_When_EmptyList&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Cart.UpdateCartItem.UpdateCartItemHandlerTests.Handler_Should_Return_200OK_With_Updated_Item&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Cart.RemoveCartItem.RemoveCartItemHandlerTests.Handler_Should_Return_NotFound_When_Result_is_False&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Cart.RemoveCartItem.RemoveCartItemHandlerTests.Handler_Should_Return_200OK_When_Result_is_True&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
