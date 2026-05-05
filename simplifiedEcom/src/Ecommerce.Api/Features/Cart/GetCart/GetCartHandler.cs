@@ -15,11 +15,6 @@ public class GetCartHandler
     public async Task<IResult> Handle(int userId)
     {
         var cartItems = await _repository.GetCart(userId);
-
-        if (cartItems == null || !cartItems.Any())
-        {
-            return Results.NotFound();
-        }
         
         return Results.Ok(cartItems);
     }

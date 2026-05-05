@@ -5,10 +5,17 @@
 
   <div class="product-details">
     <h2 class="h2-name">{{ product.name }}</h2>
-    <h4 class="h4-category">Category: {{ product.categoryName }} > <span>{{ product.subcategoryName }}</span></h4>
+    <h4 class="h4-category">
+      Category: {{ product.categoryName }} > <span>{{ product.subcategoryName }}</span>
+    </h4>
     <h2 class="h4-price">Rs. {{ product.price }}</h2>
     <h4 class="h4-availability">Availability: {{ product.availability }}</h4>
     <h4 class="h4-condition">Condition: {{ product.condition }}</h4>
     <h4 class="h4-brandName">Brand: {{ product.brandName }}</h4>
+    <div class="addToCart">
+      <label for="number">Quantity: </label>
+      <input type="number" min="1" #qty />
+      <button (click)="addToCart(product.id, +qty.value)">Add to cart</button>
+    </div>
   </div>
 }

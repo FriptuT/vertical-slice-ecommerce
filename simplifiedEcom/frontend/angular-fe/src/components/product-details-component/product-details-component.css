@@ -40,3 +40,17 @@
 .h4-brandName{
     color:rgb(97, 97, 97);
 }
+
+
+/* add to cart */
+.addToCart{
+    position:absolute;
+    right: 100px;
+    bottom: 190px;
+}
+
+input{
+    width:30px;
+    height:20px;
+    margin-right:10px;
+}

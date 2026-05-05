@@ -1,0 +1,54 @@
+.table-container{
+    position: absolute;
+    top: 400px;
+    left: 450px;
+    width: 1000px;
+    height: 100px;
+}
+
+tr{
+    border:1px solid rgb(236, 236, 236);
+}
+
+table{
+    border:1px solid gray;
+    border-collapse: collapse;
+    width: 1000px;
+    height: 100px;
+}
+
+
+.titles{
+    background-color: orange;
+    color: white;
+}
+
+.largest{
+    text-align: left;
+}
+
+.remove-btnz{
+    position:absolute;
+    right:1px;
+}
+
+/* checkout */
+
+.gotocheckout{
+    position:absolute;
+    top: 180px;
+    right:250px;
+}
+
+
+.checkout-btn{
+    width: 200px;
+    height: 30px;
+    background-color: orange;
+    color:white;
+    border:1px solid white;
+}
+
+.checkout-btn:hover{
+    color: black;
+}

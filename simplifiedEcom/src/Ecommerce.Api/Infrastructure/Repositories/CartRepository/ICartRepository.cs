@@ -5,7 +5,7 @@ using Domain.Cart;
 public interface ICartRepository
 {
     // AddToCart
-    Task<CartItemDto> AddToCart(int userId, int productId, int quantity);
+    Task<AddCartItemResponse> AddToCart(int userId, int productId, int quantity);
     // GetCart
     Task<List<CartItemDto>> GetCart(int userId);
     // UpdateCartItem

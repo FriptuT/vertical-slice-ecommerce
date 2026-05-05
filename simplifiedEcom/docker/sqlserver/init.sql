@@ -148,6 +148,10 @@ CREATE TABLE Orders(
     Id INT IDENTITY PRIMARY KEY,
     UserId INT,
     TotalAmount DECIMAL(10,2),
+    ShippingName NVARCHAR(100),
+    ShippingAddress NVARCHAR(100),
+    ShippingCity NVARCHAR(100),
+    ShippingPostalCode NVARCHAR(20),
     
     FOREIGN KEY (UserId) REFERENCES Users(Id)
 );
@@ -156,6 +160,8 @@ CREATE TABLE OrderItems(
     Id INT IDENTITY PRIMARY KEY,
     OrderId INT,
     ProductId INT,
+    Quantity INT,
+    UnitPrice DECIMAL(10,2),
     
     FOREIGN KEY (OrderId) REFERENCES Orders(Id),
     FOREIGN KEY (ProductId) REFERENCES Products(Id)

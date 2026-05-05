@@ -15,7 +15,7 @@ public class CartRepository : ICartRepository
         _databaseConnection = databaseConnection;
     }
 
-    public async Task<CartItemDto> AddToCart(int userId, int productId, int quantity)
+    public async Task<AddCartItemResponse> AddToCart(int userId, int productId, int quantity)
     {
         using var connection = _databaseConnection.CreateConnection();
         await connection.OpenAsync();
@@ -82,11 +82,12 @@ public class CartRepository : ICartRepository
         var selectCartItemCmd = new SqlCommand(
             @"
                 SELECT 
+                    ci.Id as CartItemId,
+                    p.Id as ProductId,
                     p.ImageUrl,
                     p.Description,
                     p.Price,
                     ci.Quantity,
-                    ci.ProductId,
                     (p.Price * ci.Quantity) as Total
                 FROM CartItems ci
                 JOIN Products p
@@ -99,14 +100,15 @@ public class CartRepository : ICartRepository
 
         using var readerItem = await selectCartItemCmd.ExecuteReaderAsync();
 
-        CartItemDto item = null;
+        AddCartItemResponse item = null;
 
         if (await readerItem.ReadAsync())
         {
-            item = new CartItemDto
+            item = new AddCartItemResponse
             {
+                Id = (int)readerItem["CartItemId"],
                 ProductId = (int)readerItem["ProductId"],
-                Imageurl = readerItem["ImageUrl"].ToString(),
+                ImageUrl = readerItem["ImageUrl"].ToString(),
                 Description = readerItem["Description"].ToString(),
                 Price = (decimal)readerItem["Price"],
                 Quantity = (int)readerItem["Quantity"],
@@ -143,6 +145,8 @@ public class CartRepository : ICartRepository
         var cartItemsCmd = new SqlCommand(
             @"
             SELECT 
+                ci.Id as CartItemId,
+                ci.ProductId,
                 p.ImageUrl,
                 p.Description,
                 p.Price,
@@ -163,7 +167,9 @@ public class CartRepository : ICartRepository
         {
             items.Add(new CartItemDto
             {
-                Imageurl = reader["ImageUrl"].ToString(),
+                CartItemId = (int)reader["CartItemId"],
+                ProductId = (int)reader["ProductId"],
+                ImageUrl = reader["ImageUrl"].ToString(),
                 Description = reader["Description"].ToString(),
                 Price = (decimal)reader["Price"],
                 Quantity = (int)reader["Quantity"],
@@ -211,7 +217,10 @@ public class CartRepository : ICartRepository
         // returnam CartItem actualizat
         var selectCmd = new SqlCommand(
             @"
-            SELECT p.ImageUrl,
+            SELECT 
+                   ci.Id as CartItemId,
+                   ci.ProductId,
+                   p.ImageUrl,
                    p.Description,
                    p.Price,
                    ci.Quantity,
@@ -234,7 +243,9 @@ public class CartRepository : ICartRepository
         {
             item = new CartItemDto
             {
-                Imageurl = readerCartItem["ImageUrl"].ToString(),
+                CartItemId = (int)readerCartItem["CartItemId"],
+                ProductId = (int)readerCartItem["ProductId"],
+                ImageUrl = readerCartItem["ImageUrl"].ToString(),
                 Description = readerCartItem["Description"].ToString(),
                 Price = (decimal)readerCartItem["Price"],
                 Quantity = (int)readerCartItem["Quantity"],

@@ -16,7 +16,7 @@ export class ProductCardComponent {
   userId!: number;
 
   constructor(private cartService: CartService, private authService: AuthService){
-    this.userId = authService.getUserId();
+    this.userId = this.authService.getUserId();
   }
 
   addToCart(productId: number){

@@ -1,18 +1,24 @@
-<div *ngFor="let item of cartItems" class="cart-item">
-    <img [src]="item.imageUrl" alt="zzz" width="80" />
+<div class="table-container">
+    <table>
+        <tr class="titles">
+            <th>Item</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let item of cartItems$ | async">
+            <th> {{ item.imageUrl }} </th>
+            <th> {{ item.description }} </th>
+            <th> Rs. {{ item.price }}</th>
+            <th>{{ item.quantity }}</th>
+            <th>{{ item.total }}</th>
+            <button class="remove-btnz" (click)="remove(item)">x</button>
+        </tr>
+    </table>
+</div>
 
-    <div class="info">
-        <h3>{{item.description}}</h3>
-        <p>Price {{item.price}}</p>
-
-        <div class="qty">
-            <button (click)="decrease(item)">-</button>
-            <span>{{item.quantity}}</span>
-            <button (click)="increase(item)">+</button>
-        </div>
-
-        <p>Total: {{item.total}}</p>
-
-        <button (click)="remove(item)">Remove</button>
-    </div>
+<div class="gotocheckout">
+    <button routerLink="/checkout" class="checkout-btn">Go to checkout</button>
 </div>
