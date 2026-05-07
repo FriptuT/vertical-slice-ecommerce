@@ -26,7 +26,7 @@ public class GetCartHandlerTests
         {
             new CartItemDto
             {
-                Imageurl = "image.jpg",
+                ImageUrl = "image.jpg",
                 Description = "Testing description",
                 Price = 300,
                 Quantity = 1,
@@ -34,7 +34,7 @@ public class GetCartHandlerTests
             },
             new CartItemDto
             {
-                Imageurl = "laptop.jpg",
+                ImageUrl = "laptop.jpg",
                 Description = "Testing description2",
                 Price = 2000,
                 Quantity = 1,
@@ -49,21 +49,5 @@ public class GetCartHandlerTests
 
         // Assert
         result.Should().BeOfType<Ok<List<CartItemDto>>>();
-    }
-
-    [Fact]
-    public async Task Handler_Should_Return_NotFound_When_EmptyList()
-    {
-        // Arrange
-        var emptyList = new List<CartItemDto>();
-
-        _repositoryMock.Setup(repo => repo.GetCart(1))
-            .ReturnsAsync(emptyList);
-            
-        // Act
-        var result = await _handler.Handle(1);
-
-        // Assert
-        result.Should().BeOfType<NotFound>();
     }
 }

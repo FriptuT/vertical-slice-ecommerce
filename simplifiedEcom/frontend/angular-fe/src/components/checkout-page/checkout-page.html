@@ -3,7 +3,7 @@
 </h1>
 
 <div class="form-personal">
-    <form>
+    <form [formGroup]="form" (ngSubmit)="placeOrder()">
         <input type="text" placeholder="Name" formControlName="shippingName" />
         <br>
         <input type="text" placeholder="Address" formControlName="shippingAddress" />

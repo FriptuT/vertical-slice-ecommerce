@@ -19,5 +19,6 @@
     &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Cart.UpdateCartItem.UpdateCartItemHandlerTests.Handler_Should_Return_200OK_With_Updated_Item&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Cart.RemoveCartItem.RemoveCartItemHandlerTests.Handler_Should_Return_NotFound_When_Result_is_False&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Cart.RemoveCartItem.RemoveCartItemHandlerTests.Handler_Should_Return_200OK_When_Result_is_True&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A0363193-75E4-46FB-B40A-025732C65061::net9.0::Ecommerce.Tests.Features.Cart.RemoveCartItem.RemoveCartItemHandlerTests.Handler_Should_Return_NoContent_When_Result_is_True&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

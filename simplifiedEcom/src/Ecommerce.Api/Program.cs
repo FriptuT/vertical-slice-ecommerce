@@ -5,12 +5,14 @@ using Ecommerce.Api.Features.Cart.AddToCart;
 using Ecommerce.Api.Features.Cart.GetCart;
 using Ecommerce.Api.Features.Cart.RemoveCartItem;
 using Ecommerce.Api.Features.Cart.UpdateCartItem;
+using Ecommerce.Api.Features.Checkout.Process;
 using Ecommerce.Api.Features.Products.GetAll;
 using Ecommerce.Api.Features.Products.GetAllBrandsWithCount;
 using Ecommerce.Api.Features.Products.GetAllCategories;
 using Ecommerce.Api.Features.Products.GetAllSubcategories;
 using Ecommerce.Api.Features.Products.GetById;
 using Ecommerce.Api.Infrastructure.Repositories.CartRepository;
+using Ecommerce.Api.Infrastructure.Repositories.CheckoutRepository;
 using Ecommerce.Api.Infrastructure.Repositories.FilterRepository;
 using Ecommerce.Api.Infrastructure.Repositories.ProductRepository;
 using Ecommerce.Api.Infrastructure.Repositories.UserRepository;
@@ -59,6 +61,10 @@ builder.Services.AddScoped<AddToCartHandler>();
 builder.Services.AddScoped<GetCartHandler>();
 builder.Services.AddScoped<UpdateCartItemHandler>();
 builder.Services.AddScoped<RemoveCartItemHandler>();
+
+// checkout
+builder.Services.AddScoped<ICheckoutRepository, CheckoutRepository>();
+builder.Services.AddScoped<ProcessCheckoutHandler>();
 
 // JWT AUTH
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -111,6 +117,9 @@ app.MapPostAddToCartEndpoint();
 app.MapGetCartEndpoint();
 app.MapPutUpdateCartItemEndpoint();
 app.MapDeleteRemoveCartItemEndpoint();
+
+// checkout
+app.MapPostCheckoutEndpoint();
 
 app.UseHttpsRedirection();
 

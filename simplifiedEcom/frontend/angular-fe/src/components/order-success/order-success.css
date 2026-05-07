@@ -1,0 +1,86 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2{
+    background-color: #F0F0E9;
+    padding: 10px;
+}
+
+h1{
+    position:relative;
+    left: 300px;
+}
+
+ul{
+    list-style: none;
+}
+
+
+.address-title{
+    font-size: 20px;
+}
+
+.delivery-address-details{
+    border:1px solid #fbfbfb;
+    width: 450px;
+    top: 240px;
+    left: 500px;
+    background-color: rgb(241, 241, 241);
+}
+
+.billing-address-details{
+    border: 1px solid #fbfbfb;
+    width: 450px;
+    top: 240px;
+    left: 500px;
+    margin-left: 50px;
+    background-color: rgb(241, 241, 241);
+
+}
+
+hr{
+    width: 300px;
+    position:relative;
+    right: 50px;
+}
+
+
+.main-container{
+    position:relative;
+    width: 1100px;
+    top: 50px;
+    left: 400px;
+}
+
+.address-details{
+    position:relative;
+    display: flex;
+}
+
+/* items table */
+
+.items-total{
+    position: absolute;
+    top: 300px;
+    width: 1100px;
+    height: 100px;
+}
+
+table{
+    border:1px solid rgb(224, 224, 224);
+    border-collapse: collapse;
+    width: 1100px;
+    height: 100px;
+}
+
+.titles{
+    background-color: orange;
+}
+
+
+th,td{
+    text-align: left;
+    padding: 10px;
+    vertical-align: middle;
+}

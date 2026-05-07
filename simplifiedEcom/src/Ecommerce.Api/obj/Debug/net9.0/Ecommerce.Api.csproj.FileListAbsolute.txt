@@ -6,6 +6,7 @@ C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\s
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\bin\Debug\net9.0\Ecommerce.Api.runtimeconfig.json
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\bin\Debug\net9.0\Ecommerce.Api.dll
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\bin\Debug\net9.0\Ecommerce.Api.pdb
+C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\bin\Debug\net9.0\Microsoft.Bcl.Cryptography.dll
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\bin\Debug\net9.0\Microsoft.Data.SqlClient.Extensions.Abstractions.dll
@@ -24,6 +25,9 @@ C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\s
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\bin\Debug\net9.0\Microsoft.OpenApi.dll
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
+C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\bin\Debug\net9.0\System.Diagnostics.EventLog.dll
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
@@ -72,7 +76,3 @@ C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\s
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\obj\Debug\net9.0\Ecommerce.Api.pdb
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\obj\Debug\net9.0\Ecommerce.Api.genruntimeconfig.cache
 C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\obj\Debug\net9.0\ref\Ecommerce.Api.dll
-C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\teodo\Desktop\github-projects\vertical-slice-ecommerce\simplifiedEcom\src\Ecommerce.Api\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

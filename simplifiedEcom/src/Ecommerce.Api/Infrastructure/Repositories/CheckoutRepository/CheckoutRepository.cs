@@ -4,7 +4,7 @@ using DefaultNamespace;
 using Domain.Checkout;
 using Microsoft.Data.SqlClient;
 
-public class CheckoutRepository: ICheckoutRepository
+public class CheckoutRepository : ICheckoutRepository
 {
     private readonly Db _databaseConnection;
 
@@ -17,11 +17,11 @@ public class CheckoutRepository: ICheckoutRepository
     {
         using var connection = _databaseConnection.CreateConnection();
         await connection.OpenAsync();
-        
+
         //1. luam cartId
         var getCartCmd = new SqlCommand(
-            @"SELECT Id FROM Carts WHERE UserId = @UserId",connection);
-        
+            @"SELECT Id FROM Carts WHERE UserId = @UserId", connection);
+
         getCartCmd.Parameters.AddWithValue("@UserId", request.UserId);
 
         var cartIdObj = await getCartCmd.ExecuteScalarAsync();
@@ -30,11 +30,11 @@ public class CheckoutRepository: ICheckoutRepository
         {
             throw new Exception("Cart not found");
         }
-        
+
         ////////////////////////// CARTD ID //////////////////////////
         int cartId = (int)cartIdObj;
         ////////////////////////// CARTD ID ////////////////////////// 
-        
+
         //2. luam produsele din cart
         var getItemsFromCartCmd = new SqlCommand(
             @"
@@ -57,7 +57,7 @@ public class CheckoutRepository: ICheckoutRepository
                     reader.GetInt32(1),
                     reader.GetDecimal(2),
                     reader.GetString(3)
-                    ));
+                ));
             }
         }
 
@@ -75,7 +75,7 @@ public class CheckoutRepository: ICheckoutRepository
             insert into Orders
             (UserId, TotalAmount, ShippingName, ShippingAddress, ShippingCity, ShippingPostalCode)
             OUTPUT INSERTED.Id
-            value
+            values
             (@UserId, @Total, @Name, @Address, @City, @Postal)
             ", connection);
 
@@ -105,7 +105,7 @@ public class CheckoutRepository: ICheckoutRepository
             insertedItemCmd.Parameters.AddWithValue("@Price", item.Price);
 
             await insertedItemCmd.ExecuteNonQueryAsync();
-            
+
             orderItems.Add(new OrderItemDto
             {
                 ProductId = item.ProductId,
@@ -114,11 +114,39 @@ public class CheckoutRepository: ICheckoutRepository
             });
         }
 
+        // itemele de returnat in success order
+        var toReturnItemsCmd = new SqlCommand(
+            @"
+            SELECT oi.ProductId, p.Name, oi.Quantity, oi.UnitPrice
+            FROM OrderItems oi 
+            JOIN Products p 
+                ON oi.ProductId = p.Id
+            WHERE oi.OrderId = @OrderId
+            ", connection);
+
+        toReturnItemsCmd.Parameters.AddWithValue("@OrderId", orderId);
+
+        var itemsToReturn = new List<ReturnedItemsDto>();
+
+        using (var toReturnItemsReader = await toReturnItemsCmd.ExecuteReaderAsync())
+        {
+            while (await toReturnItemsReader.ReadAsync())
+            {
+                itemsToReturn.Add(new ReturnedItemsDto
+                {
+                    ProductId = toReturnItemsReader.GetInt32(0),
+                    ProductName = toReturnItemsReader.GetString(1),
+                    Quantity = toReturnItemsReader.GetInt32(2),
+                    UnitPrice = toReturnItemsReader.GetDecimal(3)
+                });
+            }
+        }
+
         //6. golim cart-ul
         var clearCartCmd = new SqlCommand(
             @"
-            DELETE FROM Carts WHERE CartId = @CartId
-            ",connection);
+            DELETE FROM CartItems WHERE CartId = @CartId
+            ", connection);
 
         clearCartCmd.Parameters.AddWithValue("@CartId", cartId);
 
@@ -133,8 +161,7 @@ public class CheckoutRepository: ICheckoutRepository
             ShippingAddress = request.ShippingAddress,
             ShippingCity = request.ShippingCity,
             ShippingPostalCode = request.ShippingPostalCode,
-            Items = orderItems
+            Items = itemsToReturn
         };
-
     }
 }

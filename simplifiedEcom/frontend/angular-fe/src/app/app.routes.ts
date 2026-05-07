@@ -5,6 +5,7 @@ import { Login } from '../components/auth/login/login';
 import { Register } from '../components/auth/register/register';
 import { CartComponent } from '../components/cart-component/cart-component';
 import { CheckoutPage } from '../components/checkout-page/checkout-page';
+import { OrderSuccess } from '../components/order-success/order-success';
 
 export const routes: Routes = [
     {
@@ -30,5 +31,9 @@ export const routes: Routes = [
     {
         path: 'checkout',
         component: CheckoutPage
+    },
+    {
+        path: 'order-success',
+        component: OrderSuccess
     }
 ];

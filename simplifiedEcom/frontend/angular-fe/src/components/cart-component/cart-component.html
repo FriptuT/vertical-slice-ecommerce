@@ -9,7 +9,7 @@
             <th></th>
         </tr>
         <tr *ngFor="let item of cartItems$ | async">
-            <th> {{ item.imageUrl }} </th>
+            <th><img [src]="item.imageUrl" [alt]="item.imageUrl" width="50"></th>
             <th> {{ item.description }} </th>
             <th> Rs. {{ item.price }}</th>
             <th>{{ item.quantity }}</th>

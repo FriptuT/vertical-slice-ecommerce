@@ -10,6 +10,6 @@ public class OrderDto
     public string ShippingCity { get; set; }
     public string ShippingPostalCode { get; set; }
     
-    public List<OrderItemDto> Items { get; set; }
+    public List<ReturnedItemsDto> Items { get; set; }
     
 }

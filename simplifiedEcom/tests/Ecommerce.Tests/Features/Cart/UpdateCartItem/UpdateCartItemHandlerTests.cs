@@ -24,7 +24,7 @@ public class UpdateCartItemHandlerTests
         // Arrange
         var updatedItem = new CartItemDto
         {
-            Imageurl = "img.jpg",
+            ImageUrl = "img.jpg",
             Description = "Hello this quantity was updated",
             Price = 100,
             Quantity = 5,

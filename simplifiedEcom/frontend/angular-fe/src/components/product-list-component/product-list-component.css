@@ -1,6 +1,6 @@
 .product-container{
     position: absolute;
-    left:800px;
+    left:700px;
     top:200px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);

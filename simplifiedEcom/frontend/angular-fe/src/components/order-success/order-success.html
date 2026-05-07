@@ -1,0 +1,61 @@
+<div class="main-container">
+  <h1 style="color: green">Order placed successfully!</h1>
+
+  <h2>Address Details</h2>
+  <div class="address-details">
+    <div class="delivery-address-details">
+      <ul>
+        <li class="address-title">YOUR DELIVERY ADDRESS</li>
+        <hr />
+        <li>{{ order?.shippingName }}</li>
+        <li>{{ order?.shippingAddress }}</li>
+        <li>{{ order?.shippingCity }}</li>
+        <li>{{ order?.shippingPostalCode }}</li>
+      </ul>
+    </div>
+
+    <div class="billing-address-details">
+      <ul>
+        <li class="address-title">YOUR BILLING ADDRESS</li>
+        <hr />
+        <li>{{ order?.shippingName }}</li>
+        <li>{{ order?.shippingAddress }}</li>
+        <li>{{ order?.shippingCity }}</li>
+        <li>{{ order?.shippingPostalCode }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="items-total">
+    <h2>Your order</h2>
+
+    <table>
+      <tr class="titles">
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Unit Price</th>
+        <th>Total</th>
+      </tr>
+
+      <tr *ngFor="let item of order?.items">
+        <td>{{ item.productName }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.unitPrice }}</td>
+        <td>{{ item.quantity * item.unitPrice }}</td>
+      </tr>
+
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>Total Amount</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>{{ order?.totalAmount }}</td>
+      </tr>
+    </table>
+  </div>
+</div>

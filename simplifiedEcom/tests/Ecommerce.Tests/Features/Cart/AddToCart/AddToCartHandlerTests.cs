@@ -22,9 +22,11 @@ public class AddToCartHandlerTests
     public async Task Handler_Should_Return_200OK_With_CartItem()
     {
         // Arrange
-        var expectedItem = new CartItemDto
+        var expectedItem = new AddCartItemResponse
         {
-            Imageurl = "img.png",
+            Id = 1,
+            ProductId = 1,
+            ImageUrl = "img.png",
             Description = "Test product",
             Price = 100,
             Quantity = 2,
@@ -38,6 +40,6 @@ public class AddToCartHandlerTests
         var result = await _handler.Handle(1, 100, 2);
         
         // Assert
-        result.Should().BeOfType<Ok<CartItemDto>>();
+        result.Should().BeOfType<Ok<AddCartItemResponse>>();
     }
 }
